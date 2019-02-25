@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Types of Triangles - free Mathematics lessons and tests</title>
+
+  <!-- Start of meta -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="This is an application that lets the user learn the types of triangles">
+  <meta name="keywords" content="Types of triangles, triangles, triangle, equilateral, isosceles, scalene "/>
+  <!-- End of meta -->
+
+  <!-- Start of links -->
+
+  <!--Start of Google Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+  <!-- Start of CSS -->
+  <link rel="styleSheet" type="text/css" href="css/main.css">
+  <link rel="styleSheet" type="text/css" href="css/responsive.css">
+  <link rel="styleSheet" type="text/css" href="css/types_of_triangles.css">
+  <!-- End of CSS -->
+  <!-- End of links -->
+
+  <!-- Start of scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous"></script>
+  <script src="scripts/js/jquery_ui_touch.js"></script>
+  <script src="https://use.fontawesome.com/c3bcd475bc.js"></script>
+  <!-- End of scripts -->
+</head>
+
+<body>
+
+
+
+  <header class="gradient-background">
+ 
+  </header>
+  
+  <!-- Start of container div -->
+  <div class="container" id="contain">
+
+    <!-- Start of Collapse Bar -->
+    <div class="collapse">
+    </div>
+    <!-- End of Collapse Bar -->
+
+    <div class="main-container max-width">
+
+      <!-- Start of Widget Content -->
+
+      <div class="widget-content">
+        <h1 class="text-centred">Types of Triangles</h1>
+
+        <!-- Start of Widget Intro -->
+        <section class="widget-section">
+          <p>Triangles can be equilateral triangles, isosceles triangles or scalene angles.</p>
+        </section>
+        <!-- End of Widget Intro -->
+
+        <section class="widget-section">
+          <h2>Test Your Knowledge!</h2>
+
+          <p>Can you tell which triangles are equilateral triangles, isosceles triangles or scalene triangles?</p>
+
+          <p>Drag all the triangles into the appropriate box.</p>
+
+          <p>But be careful, 5 wrong answers and you lose the game.</p>
+
+          <!-- Start of Widget Canvas -->
+          <div class="widget-canvas">
+            <div class="timer">
+              <strong class="hide-mobile">Time:</strong> <span class="time"> 0</span> s<span class="hide-mobile">econds</span>
+            </div>
+
+            <div class="hearts">
+              <span class="hide-mobile">Lives:</span>
+
+              <i class="fa fa-heart" aria-hidden="true"></i>
+
+              <i class="fa fa-heart" aria-hidden="true"></i>
+
+              <i class="fa fa-heart" aria-hidden="true"></i>
+
+              <i class="fa fa-heart" aria-hidden="true"></i>
+
+              <i class="fa fa-heart" aria-hidden="true"></i>
+            </div>
+
+            <div class="restart">
+              <span class="hide-mobile">Restart Game:</span>
+
+              <i class="fa fa-repeat"></i>
+            </div>
+
+            <div class="triangle-holder">
+
+            </div>
+
+            <div class="droppable equilateral-drop">
+              <h3 class="droppable-title">Equilateral<span class="hide-mobile"> Triangles</span></h3>
+            </div>
+
+            <div class="droppable isosceles-drop">
+              <h3 class="droppable-title">Isosceles<span class="hide-mobile"> Triangles</span></h3>
+            </div>
+
+            <div class="droppable scalene-drop">
+              <h3 class="droppable-title">Scalene<span class="hide-mobile"> Triangles</span></h3>
+            </div>
+          </div>
+          <!--End of Widget Canvas-->
+        </section>
+      </div>
+      <!--End of Widget Content-->
+
+      <!--Start of Win Modal-->
+      <div class="win modal">
+        <h1 class="model-title">Congratulations<span class="hide-mobile">. You've won!</span></h1>
+
+        <p class="modal-text">You have won the game in <span class="time-modal"></span> seconds, with <span class="hearts-modal"></span>.</p>
+
+        <button class="modal-button gradient-background">
+          Play again!
+        </button>
+
+        <img class="hide-mobile" src="../images/test_correct2.png">
+      </div>
+      <!--End of Win Modal-->
+
+      <!--Start of Lose Modal-->
+      <div class="lose modal">
+        <h1 class="model-title">Try Again</h1>
+
+        <p class="modal-text">Better luck next time.</p>
+
+        <p class="modal-text">Make sure you can tell your equilateral, isosceles and scalene angles from each other.</p>
+
+        <button class="modal-button gradient-background">
+          Try again!
+        </button>
+
+        <img class="hide-mobile" src="../images/test_wrong2.png">
+      </div>
+      <!--End of Lose Modal-->
+
+    </div>
+    <!-- End of Main Container -->
+
+   </div>
+  <!-- End of Container -->
+
+  <script language="JavaScript" src="js/types_of_triangles.js"></script>
+
+</body>
+
+</html>

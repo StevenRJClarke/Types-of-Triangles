@@ -1,0 +1,230 @@
+/*Layout*/
+img {
+  margin-top: 0;
+  padding: 5px;
+}
+.widget-content {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-bottom: 50px;
+  width: 80%;
+}
+.widget-section {
+  border-bottom: 2px solid #f9f9f9;
+  margin: 0 2em 1em 2em;
+  padding-bottom: 1em;
+}
+.widget-section:last-of-type {
+  border-bottom: none;
+}
+.widget-canvas {
+  /*Grid layout*/
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 30px repeat(2, minmax(300px, 1fr));
+  grid-gap: 1em;
+  grid-template-areas: "top-left top-middle top-right"
+  "left middle-middle right"
+  "left bottom-middle right";
+
+  border: 2px solid #f9f9f9;
+  padding: 1em;
+  width: 100%;
+}
+
+/*Time, Hearts, Restart*/
+.timer {
+  font-family: 'Lato', sans-serif;
+  grid-area: top-left;
+  padding: 0.2em;
+}
+.hearts {
+  font: bold 1em 'Lato', sans-serif;
+  grid-area: top-middle;
+  padding: 0.2em;
+}
+.restart {
+  font: bold 1em 'Lato', sans-serif;
+  grid-area: top-right;
+  padding: 0.2em;
+  text-align: right;
+}
+
+/*Fractions*/
+.triangle-holder {
+  display: flex;
+  flex-wrap: wrap;
+  grid-area: middle-middle;
+  justify-content: space-around;
+}
+.draggable {
+  align-items: center;
+  border-radius: 8px;
+  color: white;
+  display: flex;
+  font: 2em 'Lato', sans-serif;
+  height: 150px;
+  justify-content: center;
+  margin: 0.25em;
+  width: 150px;
+}
+
+/*Droppable areas*/
+.droppable {
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+.equilateral-drop {
+  grid-area: left;
+}
+.isosceles-drop {
+  grid-area: right;
+}
+.scalene-drop {
+  grid-area: bottom-middle;
+}
+.highlight {
+  box-shadow: 0 0 1em #ddd;
+}
+
+/*Right or wrong*/
+.correct {
+  background: #02ccba;
+}
+.wrong {
+  background: #f45942;
+}
+
+/*Win modal*/
+.modal {
+  align-items: center;
+  background-color: white;
+  border-radius: 2em;
+  box-shadow: 0 0 1em #ddd;
+  display: none;
+  flex-direction: column;
+  height: 500px;
+  justify-content: center;
+  padding: 1em;
+  position: absolute;
+  top: 25em;
+  width: 800px;
+}
+.modal-text {
+  font-size: 1.2em;
+}
+.modal-button {
+  border: none;
+  border-radius: 1em;
+  box-shadow: 0.2em 0.2em 0.5em #ddd;
+  color: white;
+  font: bold 1.2em 'Lato', sans-serif;
+  margin: 1em;
+  padding: 0.8em;
+}
+
+/*Responsive*/
+@media screen and (max-width: 700px) {
+  /*Layout*/
+  .widget-content {
+    width: 100%;
+  }
+  .widget-canvas {
+    /*Grid layout*/
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 30px 200px repeat(3, 75px);
+    grid-template-areas: "one-left one-middle one-right"
+    "two two two"
+    "three three three"
+    "four four four"
+    "five five five";
+  }
+
+  /*Time, Hearts, Restart*/
+  .timer {
+    font-size: 0.8em;
+    grid-area: one-left;
+  }
+  .hearts {
+    align-items: center;
+    display: flex;
+    font-size: 0.8em;
+    grid-area: one-middle;
+    justify-content: center;
+  }
+  .restart {
+    font-size: 0.8em;
+    grid-area: one-right;
+  }
+  .hide-mobile {
+    display: none;
+  }
+
+  /*Fractions*/
+  .triangle-holder {
+    grid-area: two;
+  }
+  .draggable {
+    border-radius: 4px;
+    font-size: 1em;
+    height: 50px;
+    width: 50px;
+  }
+
+  /*Droppable areas*/
+  .equilateral-drop {
+    grid-area: three;
+  }
+  .isosceles-drop {
+    grid-area: four;
+  }
+  .scalene-drop {
+    grid-area: five;
+  }
+  .droppable-title {
+    font-size: 0.8em;
+  }
+
+  /*Win modal*/
+  .modal {
+    height: 200px;
+    width: 300px;
+  }
+  .modal-title {
+    font-size: 1em;
+  }
+  .modal-text {
+    font-size: 0.8em;
+  }
+  .modal-button {
+    font: bold 0.8em 'Lato', sans-serif;
+    margin: 0.5em;
+    padding: 0.8em;
+  }
+}
+
+@media screen and (min-width: 701px) and (max-width: 1200px) {
+  /*Layout*/
+  .widget-content {
+    width: 100%;
+  }
+  .widget-canvas {
+    /*Grid layout*/
+    grid-template-rows: 30px repeat(2, minmax(200px, 1fr));
+  }
+
+  /*Fractions*/
+  .draggable {
+    border-radius: 4px;
+    font-size: 1.2em;
+    height: 75px;
+    width: 75px;
+  }
+
+  /*Win modal*/
+  .modal {
+    height: 450px;
+    width: 550px;
+  }
